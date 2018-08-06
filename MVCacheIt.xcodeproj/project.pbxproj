@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		077C0B962115007F0066164D /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077C0B952115007F0066164D /* PhotoCell.swift */; };
+		077C0B98211500F20066164D /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077C0B97211500F20066164D /* PhotoTableViewCell.swift */; };
+		077C0B9A211580290066164D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077C0B99211580290066164D /* FeedViewController.swift */; };
+		077C0C172118E7230066164D /* CacheAnything.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0C162118E7230066164D /* CacheAnything.framework */; };
 		07EC6A39211356650031B76F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC6A38211356650031B76F /* AppDelegate.swift */; };
 		07EC6A3B211356650031B76F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC6A3A211356650031B76F /* ViewController.swift */; };
 		07EC6A3E211356650031B76F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07EC6A3C211356650031B76F /* Main.storyboard */; };
@@ -14,6 +18,11 @@
 		07EC6A43211356660031B76F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07EC6A41211356660031B76F /* LaunchScreen.storyboard */; };
 		07EC6A4E211356660031B76F /* MVCacheItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC6A4D211356660031B76F /* MVCacheItTests.swift */; };
 		07EC6A59211356660031B76F /* MVCacheItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC6A58211356660031B76F /* MVCacheItUITests.swift */; };
+		07EC6A6A211383370031B76F /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC6A68211383360031B76F /* PinterestLayout.swift */; };
+		07EC6A6D211389CF0031B76F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC6A6C211389CF0031B76F /* ViewModel.swift */; };
+		07EC6A7321138A8F0031B76F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC6A6F21138A8F0031B76F /* APIClient.swift */; };
+		07EC6A7421138A8F0031B76F /* PasteBinClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC6A7021138A8F0031B76F /* PasteBinClient.swift */; };
+		07EC6A7521138A8F0031B76F /* PasteBinImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC6A7121138A8F0031B76F /* PasteBinImages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +42,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		077C0C1421174F2E0066164D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		077C0B952115007F0066164D /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		077C0B97211500F20066164D /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		077C0B99211580290066164D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		077C0C162118E7230066164D /* CacheAnything.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CacheAnything.framework; sourceTree = "<group>"; };
 		07EC6A35211356650031B76F /* MVCacheIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVCacheIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07EC6A38211356650031B76F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07EC6A3A211356650031B76F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +73,11 @@
 		07EC6A54211356660031B76F /* MVCacheItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVCacheItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07EC6A58211356660031B76F /* MVCacheItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCacheItUITests.swift; sourceTree = "<group>"; };
 		07EC6A5A211356660031B76F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07EC6A68211383360031B76F /* PinterestLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		07EC6A6C211389CF0031B76F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		07EC6A6F21138A8F0031B76F /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		07EC6A7021138A8F0031B76F /* PasteBinClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteBinClient.swift; sourceTree = "<group>"; };
+		07EC6A7121138A8F0031B76F /* PasteBinImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteBinImages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				077C0C172118E7230066164D /* CacheAnything.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +106,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		077C0BAD211712590066164D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		077C0C152118E7230066164D /* CacheFramework */ = {
+			isa = PBXGroup;
+			children = (
+				077C0C162118E7230066164D /* CacheAnything.framework */,
+			);
+			path = CacheFramework;
+			sourceTree = "<group>";
+		};
 		07EC6A2C211356650031B76F = {
 			isa = PBXGroup;
 			children = (
+				077C0C152118E7230066164D /* CacheFramework */,
 				07EC6A37211356650031B76F /* MVCacheIt */,
 				07EC6A4C211356660031B76F /* MVCacheItTests */,
 				07EC6A57211356660031B76F /* MVCacheItUITests */,
 				07EC6A36211356650031B76F /* Products */,
+				077C0BAD211712590066164D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +146,12 @@
 		07EC6A37211356650031B76F /* MVCacheIt */ = {
 			isa = PBXGroup;
 			children = (
+				07EC6A6E21138A8F0031B76F /* Networking */,
+				07EC6A6B211389B70031B76F /* ViewModels */,
+				07EC6A66211383360031B76F /* Views */,
 				07EC6A38211356650031B76F /* AppDelegate.swift */,
 				07EC6A3A211356650031B76F /* ViewController.swift */,
+				077C0B99211580290066164D /* FeedViewController.swift */,
 				07EC6A3C211356650031B76F /* Main.storyboard */,
 				07EC6A3F211356660031B76F /* Assets.xcassets */,
 				07EC6A41211356660031B76F /* LaunchScreen.storyboard */,
@@ -125,6 +178,34 @@
 			path = MVCacheItUITests;
 			sourceTree = "<group>";
 		};
+		07EC6A66211383360031B76F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				077C0B952115007F0066164D /* PhotoCell.swift */,
+				07EC6A68211383360031B76F /* PinterestLayout.swift */,
+				077C0B97211500F20066164D /* PhotoTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		07EC6A6B211389B70031B76F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				07EC6A6C211389CF0031B76F /* ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		07EC6A6E21138A8F0031B76F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				07EC6A6F21138A8F0031B76F /* APIClient.swift */,
+				07EC6A7021138A8F0031B76F /* PasteBinClient.swift */,
+				07EC6A7121138A8F0031B76F /* PasteBinImages.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +216,7 @@
 				07EC6A31211356650031B76F /* Sources */,
 				07EC6A32211356650031B76F /* Frameworks */,
 				07EC6A33211356650031B76F /* Resources */,
+				077C0C1421174F2E0066164D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,8 +338,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				077C0B98211500F20066164D /* PhotoTableViewCell.swift in Sources */,
+				07EC6A6D211389CF0031B76F /* ViewModel.swift in Sources */,
+				07EC6A7421138A8F0031B76F /* PasteBinClient.swift in Sources */,
+				07EC6A6A211383370031B76F /* PinterestLayout.swift in Sources */,
+				077C0B9A211580290066164D /* FeedViewController.swift in Sources */,
+				077C0B962115007F0066164D /* PhotoCell.swift in Sources */,
+				07EC6A7521138A8F0031B76F /* PasteBinImages.swift in Sources */,
 				07EC6A3B211356650031B76F /* ViewController.swift in Sources */,
 				07EC6A39211356650031B76F /* AppDelegate.swift in Sources */,
+				07EC6A7321138A8F0031B76F /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,11 +522,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W5KCMKK9XT;
+				FRAMEWORK_SEARCH_PATHS = (
+					$SOURCE_ROOT,
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CacheFramework",
+				);
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = MVCacheIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prashant.MVCacheIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -450,11 +547,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W5KCMKK9XT;
+				FRAMEWORK_SEARCH_PATHS = (
+					$SOURCE_ROOT,
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CacheFramework",
+				);
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = MVCacheIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prashant.MVCacheIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

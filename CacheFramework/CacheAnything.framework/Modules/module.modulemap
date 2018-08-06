@@ -1,0 +1,11 @@
+framework module CacheAnything {
+  umbrella header "CacheAnything.h"
+
+  export *
+  module * { export * }
+}
+
+module CacheAnything.Swift {
+    header "CacheAnything-Swift.h"
+    requires objc
+}
