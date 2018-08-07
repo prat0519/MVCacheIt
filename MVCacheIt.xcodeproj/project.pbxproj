@@ -11,6 +11,7 @@
 		077C0B98211500F20066164D /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077C0B97211500F20066164D /* PhotoTableViewCell.swift */; };
 		077C0B9A211580290066164D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077C0B99211580290066164D /* FeedViewController.swift */; };
 		077C0C172118E7230066164D /* CacheAnything.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0C162118E7230066164D /* CacheAnything.framework */; };
+		077C0C55211A3CB00066164D /* CacheAnything.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0C162118E7230066164D /* CacheAnything.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07EC6A39211356650031B76F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC6A38211356650031B76F /* AppDelegate.swift */; };
 		07EC6A3B211356650031B76F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EC6A3A211356650031B76F /* ViewController.swift */; };
 		07EC6A3E211356650031B76F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07EC6A3C211356650031B76F /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				077C0C55211A3CB00066164D /* CacheAnything.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,6 +536,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "";
+				OTHER_SWIFT_FLAGS = "-Onone";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prashant.MVCacheIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -559,6 +562,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "";
+				OTHER_SWIFT_FLAGS = "-Onone";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prashant.MVCacheIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
