@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import CacheAnything
 
 
@@ -31,7 +32,6 @@ class ViewController: UIViewController, MVURLObserverProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         
         if let layout = collectionView.collectionViewLayout as? PinterestLayout {
             layout.delegate = self
@@ -78,9 +78,10 @@ class ViewController: UIViewController, MVURLObserverProtocol {
         else {
             image = #imageLiteral(resourceName: "pinterest")
         }
-        
-        if self.loadedPhotos[urlString] == nil {
-            self.loadedPhotos.setValue(image, forKey: urlString)
+        DispatchQueue.main.async {
+            if self.loadedPhotos[urlString] == nil {
+                self.loadedPhotos.setValue(image, forKey: urlString)
+            }
         }
         
         let array = photos.allValues as NSArray
@@ -91,8 +92,6 @@ class ViewController: UIViewController, MVURLObserverProtocol {
             if let cell = self.collectionView.cellForItem(at: indexPath) as? PhotoCell {
                 if let fillImage = image {
                     cell.imageViewFeed?.image = fillImage
-                    cell.reloadInputViews()
-                    self.collectionView.reloadItems(at: [indexPath])
                 }
             }
         }
@@ -126,7 +125,6 @@ extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
         
-        //let url = viewModel.cellViewModels[indexPath.item]
         let rowKey = self.arrKeys[indexPath.row]
         let url = (photos.value(forKey: rowKey) as? String)!
         
