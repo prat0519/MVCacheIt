@@ -113,7 +113,7 @@ extension ViewController: PinterestLayoutDelegate {
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photos.count
+        return self.arrKeys.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -122,9 +122,9 @@ extension ViewController: UICollectionViewDataSource {
         let rowKey = self.arrKeys[indexPath.row]
         let url = (photos.value(forKey: rowKey) as? String)!
         
-        if let val = self.loadedPhotos[url] {
+        if self.loadedPhotos.count > 0,  let val = self.loadedPhotos[url] {
             cell.imageViewFeed.image = val as? UIImage
-            self.resourceManager.cancelDataFor(url, withIdentifier: identifierName)
+            //self.resourceManager.cancelDataFor(url, withIdentifier: identifierName)
         }
         else {
             self.resourceManager.getDataFor(url, withIdentifier: identifierName, withUrlObserver: self)
