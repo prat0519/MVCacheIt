@@ -98,14 +98,7 @@ class ViewController: UIViewController, MVURLObserverProtocol {
 
 extension ViewController: PinterestLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
-        
-        if let val = self.loadedPhotos[self.photos.value(forKey: arrKeys[indexPath.row])!] as? UIImage {
-            let height = val.size.height
-            return height
-        }
-        else {
             return 200
-        }
     }
 }
 
@@ -135,7 +128,7 @@ extension ViewController: UICollectionViewDataSource {
 
 }
 
-extension ViewController
+extension ViewController : UIScrollViewDelegate
 {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
     

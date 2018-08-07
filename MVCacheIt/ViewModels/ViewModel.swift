@@ -50,7 +50,7 @@ class ViewModel {
     
     private func fetchPhoto() {
         self.photos.forEach { (photo) in
-            let object = photo.urls.regular.relativeString
+            let object = photo.urls.small.relativeString
             let name = "\(object.hashValue)"
             let url  = object
             pinterestPhotos.setValue(url, forKey: name)
