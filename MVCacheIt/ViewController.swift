@@ -32,6 +32,7 @@ class ViewController: UIViewController, MVURLObserverProtocol {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        resourceManager = MVResourceManager.init(configuration: nil)
         if let layout = collectionView.collectionViewLayout as? PinterestLayout {
             layout.delegate = self
         }
@@ -61,14 +62,11 @@ class ViewController: UIViewController, MVURLObserverProtocol {
         }
        
         viewModel.fetchPhotos()
-        resourceManager = MVResourceManager.init(configuration: nil)
 
     }
     
     
     func didFetchURLData(_ urlString: String, data: Data?, errorMessage: String) {
-
-        
         
         var image : UIImage?
         if let imageData = data {
@@ -85,6 +83,7 @@ class ViewController: UIViewController, MVURLObserverProtocol {
             let array = self.photos.allValues as NSArray
             let index = array.index(of: urlString)
             let indexPath = IndexPath.init(row: index, section: 0)
+            
             if let cell = self.collectionView.cellForItem(at: indexPath) as? PhotoCell {
                 if let fillImage = image {
                     cell.imageViewFeed?.image = fillImage
