@@ -117,7 +117,7 @@ extension ViewController: UICollectionViewDataSource {
         
         if self.loadedPhotos.count > 0,  let val = self.loadedPhotos[url] {
             cell.imageViewFeed.image = val as? UIImage
-            //self.resourceManager.cancelDataFor(url, withIdentifier: identifierName)
+            self.resourceManager.cancelDataFor(url, withIdentifier: identifierName)
         }
         else {
             self.resourceManager.getDataFor(url, withIdentifier: identifierName, withUrlObserver: self)
