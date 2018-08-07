@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Foundation
 import CacheAnything
 
 
@@ -82,21 +81,17 @@ class ViewController: UIViewController, MVURLObserverProtocol {
             if self.loadedPhotos[urlString] == nil {
                 self.loadedPhotos.setValue(image, forKey: urlString)
             }
-        }
-        
-        let array = photos.allValues as NSArray
-        let index = array.index(of: urlString)
-        let indexPath = IndexPath.init(row: index, section: 0)
-
-        DispatchQueue.main.async {
+            
+            let array = self.photos.allValues as NSArray
+            let index = array.index(of: urlString)
+            let indexPath = IndexPath.init(row: index, section: 0)
             if let cell = self.collectionView.cellForItem(at: indexPath) as? PhotoCell {
                 if let fillImage = image {
                     cell.imageViewFeed?.image = fillImage
                 }
             }
+            
         }
-        
-       
     }
 }
 
@@ -119,7 +114,7 @@ extension ViewController: PinterestLayoutDelegate {
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.photos.count
+        return photos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

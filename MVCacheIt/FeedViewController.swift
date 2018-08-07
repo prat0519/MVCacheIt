@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Foundation
 import CacheAnything
 
 class FeedViewController: UIViewController , MVURLObserverProtocol, UITableViewDelegate, UITableViewDataSource {
