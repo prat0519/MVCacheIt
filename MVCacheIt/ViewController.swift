@@ -72,9 +72,7 @@ class ViewController: UIViewController, MVURLObserverProtocol {
         if let imageData = data {
             image = UIImage(data:imageData)
         }
-        else {
-            image = #imageLiteral(resourceName: "pinterest")
-        }
+    
         DispatchQueue.main.async {
             if self.loadedPhotos[urlString] == nil {
                 self.loadedPhotos.setValue(image, forKey: urlString)
@@ -120,6 +118,7 @@ extension ViewController: UICollectionViewDataSource {
             self.resourceManager.cancelDataFor(url, withIdentifier: identifierName)
         }
         else {
+            cell.imageViewFeed.image = #imageLiteral(resourceName: "pinterest")
             self.resourceManager.getDataFor(url, withIdentifier: identifierName, withUrlObserver: self)
         }
         
